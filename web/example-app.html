@@ -1,0 +1,20 @@
+<link rel="import" href="clickrandom.html">
+<polymer-element name="example-app">
+  <template>
+    <style>
+      div {
+        font-size: 24pt;
+        text-align: center;
+        margin-top: 140px;
+      }
+      button {
+        font-size: 24pt;
+        margin-bottom: 20px;
+      }
+    </style>
+    test it!
+    <click-random number="6" on-random-generated="{{random}}"></click-random>
+  </template>
+  <script type="application/dart" src="example-app.dart"></script>
+</polymer-element>
+
