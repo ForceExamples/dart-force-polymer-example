@@ -1,19 +1,31 @@
 <link rel="import" href="clickrandom.html">
-<polymer-element name="example-app">
+<link rel="import" href="random_item.html">
+<polymer-element name="example-app" attributes="modelId">
   <template>
     <style>
       div {
-        font-size: 24pt;
+        font-size: 18pt;
         text-align: center;
         margin-top: 140px;
+      }
+      li {
+        font-size: 12pt;
       }
       button {
         font-size: 24pt;
         margin-bottom: 20px;
       }
     </style>
-    test it!
     <click-random number="6" on-random-generated="{{random}}"></click-random>
+    
+    <section id="main" hidden?="{{model.items.length == 0}}">
+        <ul id="channel-list"
+            on-zine-destroy-channel="{{destroyItemAction}}">
+          <template repeat="{{model.items}}">
+            <li is="random-item" item="{{}}"></li>
+          </template>
+        </ul>
+    </section>
   </template>
   <script type="application/dart" src="example-app.dart"></script>
 </polymer-element>

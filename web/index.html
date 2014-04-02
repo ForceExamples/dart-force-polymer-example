@@ -9,16 +9,18 @@
     
     <!-- import the click-counter -->
     <link rel="import" href="example-app.html">
+    <link rel="import" href="random_model.html"> 
     <script type="application/dart">export 'package:polymer/init.dart';</script>
     <script src="packages/browser/dart.js"></script>
   </head>
   <body>
     <h1>Dart force polymer example</h1>
-    
+     
     <p>Use polymer with force!</p>
     
     <div id="sample_container_id">
-      <example-app></example-app>
+      <random-model id="model"></random-model>
+      <example-app modelId="model"></example-app>
     </div>
 
   </body>

@@ -1,0 +1,10 @@
+<polymer-element name="random-item" extends="li" on-blur="{{commitAction}}">
+  <template>
+    <link rel="stylesheet" href="td_item.css">
+    <div class="view">
+      <label>{{item.url}}</label>
+      <button class="destroy" on-click="{{destroyAction}}">X</button>
+    </div>
+  </template>
+  <script type="application/dart" src="random_item.dart"></script>
+</polymer-element>
