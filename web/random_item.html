@@ -1,6 +1,10 @@
 <polymer-element name="random-item" extends="li" on-blur="{{commitAction}}">
   <template>
-    <link rel="stylesheet" href="td_item.css">
+    <style>
+      button.destroy {
+        font-size: 12pt;
+      }
+    </style>
     <div class="view">
       <label>{{item.url}}</label>
       <button class="destroy" on-click="{{destroyAction}}">X</button>

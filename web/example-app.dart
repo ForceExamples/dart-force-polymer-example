@@ -42,5 +42,9 @@ class ExampleApp extends PolymerElement {
   void itemChangedAction() {
      if (model != null) model.itemsChanged();
   }
+  
+  void destroyItemAction(e, detail) {
+      model.destroyItem(detail);
+  }
 }
 

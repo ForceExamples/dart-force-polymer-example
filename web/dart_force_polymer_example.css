@@ -11,4 +11,28 @@ h1, p {
   color: #333;
 }
 
+.small {
+  font-size: 11px;
+  color: #999;
+}
+
+input.u1 {
+    padding: 6px 12px;
+    font-size: 1.6em;
+    color: #787878;
+    letter-spacing: -0.02em;
+    text-shadow: 0px 1px 0px #fff;
+    outline: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(#e0e0e0), to(#ffffff));
+    background: -moz-linear-gradient(top,  #e0e0e0,  #ffffff);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    border: 1px solid #717171;
+    margin-right: 20px;
+    -webkit-box-shadow: 1px 1px 0px #efefef;
+    -moz-box-shadow: 1px 1px 0px #efefef;
+    box-shadow:  1px 1px 0px #efefef;
+}
+
 
