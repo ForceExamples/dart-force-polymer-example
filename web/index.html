@@ -19,8 +19,17 @@
     <p>Use polymer with force!</p>
     
     <div id="sample_container_id">
+      <form role="form" action="/post/" method="POST">
+        <div class="form-group">
+          <label for="nameField">Fill in a name</label>
+          <input type="text" name="name" class="form-control" id="nameField" placeholder="name">
+        </div>
+        <div>
+          send a random number without a name!
+        </div>
+      </form>
       <random-model id="model"></random-model>
-      <example-app modelId="model"></example-app>
+      <example-app modelId="model" name="none"></example-app>
     </div>
 
   </body>

@@ -11,6 +11,7 @@ import 'random_model.dart';
 class ExampleApp extends PolymerElement {
   @observable ClickRandom clickRandom;
   
+  @published String name;
   @published String modelId;
    
   @observable RandomModel model;
@@ -22,9 +23,10 @@ class ExampleApp extends PolymerElement {
     
     forceClient.on("notifications", (e, sender) {
         var json = e.json;
-        // var random = json.random;
-        print("received $json");
-        model.newItem("received $json");
+        var random = json["random"];
+        var name = json["name"];
+        print("received $random");
+        model.newItem("received $random from $name");
     });
   }
   
@@ -34,7 +36,7 @@ class ExampleApp extends PolymerElement {
 
   void random(e, number) {
     print("number $number");
-    forceClient.send('count', {"random" : number, "foo" : "hello"} );
+    forceClient.send('count', {"random" : number, "name" : name } );
   }
   
   void itemChangedAction() {
