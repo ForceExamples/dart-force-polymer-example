@@ -1,4 +1,4 @@
-library chat_example_force;
+library example_force_polymer;
 
 import 'dart:async';
 import 'dart:io';

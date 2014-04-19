@@ -1,4 +1,4 @@
-part of chat_example_force;
+part of example_force_polymer;
 
 @Controller()
 class PostController {
