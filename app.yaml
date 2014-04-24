@@ -1,0 +1,15 @@
+application: Force Polymer Example
+version: 1
+deploy: true
+pub: true
+dart2js: true 
+framework: force
+
+handlers:
+- url: /
+  script: server.dart
+  
+# Static content  
+#- url: /
+#  match: postregex
+#  static_dir: web
