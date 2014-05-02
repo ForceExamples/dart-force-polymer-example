@@ -1,15 +1,9 @@
 name: dart_force_polymer_example
 description: A sample Polymer application
 dependencies:
-    polymer: any
     http: '>=0.9.0 <0.10.0'
     http_server: '>=0.9.0 <0.10.0'
     logging: '>=0.9.0 <0.10.0'
     mustache4dart: '1.0.3'
     force: 
       git: git://github.com/jorishermans/dart-force.git
-transformers:
-- polymer:
-    entry_points: 
-      - web/index.html
-      - web/name.html

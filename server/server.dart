@@ -18,10 +18,15 @@ void main() {
     print('${rec.level.name}: ${rec.time}: ${rec.message}');
   });
   
-  var portEnv = Platform.environment['PORT'];
-  var port = portEnv == null ? 8080 : int.parse(portEnv);
-  
-  ForceServer fs = new ForceServer(host: "0.0.0.0", port: port, startPage: "index.html" );
+// Setup what port to listen to 
+var portEnv = Platform.environment['PORT'];
+var port = portEnv == null ? 8080 : int.parse(portEnv);
+var serveClient = portEnv == null ? true : false;
+
+// Create a force server
+ForceServer fs = new ForceServer(port: port, 
+                                clientFiles: '../client/build/web/',
+                                clientServe: serveClient);
   if (fs.server.viewRender is MustacheRender) {
     MustacheRender mustacheRender = fs.server.viewRender;
     mustacheRender.delimiter = new Delimiter('[[', ']]');

@@ -1,0 +1,11 @@
+name: dart_force_polymer_example
+description: A sample Polymer application
+dependencies:
+    polymer: any
+    force: 
+      git: git://github.com/jorishermans/dart-force.git
+transformers:
+- polymer:
+    entry_points: 
+      - web/index.html
+      - web/name.html
