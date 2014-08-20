@@ -3,7 +3,7 @@ description: A sample Polymer application
 dependencies:
     polymer: any
     force: 
-      git: git://github.com/jorishermans/dart-force.git
+      git: git://github.com/ForceUniverse/dart-force.git
 transformers:
 - polymer:
     entry_points: 

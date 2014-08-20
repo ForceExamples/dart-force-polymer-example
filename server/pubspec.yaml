@@ -6,4 +6,4 @@ dependencies:
     logging: '>=0.9.0 <0.10.0'
     mustache4dart: '1.0.3'
     force: 
-      git: git://github.com/jorishermans/dart-force.git
+      git: git://github.com/ForceUniverse/dart-force.git

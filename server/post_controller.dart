@@ -1,6 +1,6 @@
 part of example_force_polymer;
 
-@Controller()
+@Controller
 class PostController {
   
   @RequestMapping(value: "/post/", method: "POST")
