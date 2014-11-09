@@ -22,14 +22,15 @@ ForceServer fs = new ForceServer(port: port,
 
   // Setup logger
   fs.setupConsoleLog();
-
-  if (fs.server.viewRender is MustacheRender) {
-    MustacheRender mustacheRender = fs.server.viewRender;
-    mustacheRender.delimiter = new Delimiter('[[', ']]');
-  }
-  fs.on('count', (e, sendable) { 
-    sendable.send('notifications', e.json);
-  });
   
-  fs.start();
+  fs.start().then((_) {
+      if (fs.server.viewRender is MustacheRender) {
+        MustacheRender mustacheRender = fs.server.viewRender;
+        mustacheRender.delimiter = new Delimiter('[[', ']]');
+      }
+      
+      fs.on('count', (e, sendable) { 
+        sendable.send('notifications', e.json);
+      });
+  });
 }
